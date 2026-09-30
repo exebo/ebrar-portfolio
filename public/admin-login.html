@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yönetici Girişi | Ebrar Ne Yapsın?</title>
+
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <a href="/" class="back">
+            ← Ana Sayfa
+        </a>
+
+        <div class="login-box">
+
+            <div class="login-logo">
+                Ebrar Ne Yapsın<span>?</span>
+            </div>
+
+            <p class="small-title">
+                YÖNETİCİ PANELİ
+            </p>
+
+            <h1>Giriş Yap</h1>
+
+            <p class="description">
+                Yönetim paneline erişmek için giriş yap.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label>Kullanıcı Adı</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Kullanıcı adınız"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Şifre</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Şifreniz"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Yönetici Girişi →
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="admin-login.js"></script>
+
+</body>
+
+</html>

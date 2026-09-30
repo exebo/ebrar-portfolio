@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ebrar Ne Yapsın?</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <a
+        href="#home"
+        class="logo"
+    >
+        Ebrar Ne Yapsın<span>?</span>
+    </a>
+
+
+    <nav>
+
+        <a href="#home">
+            Ana Sayfa
+        </a>
+
+        <a href="#reports">
+            Raporlar
+        </a>
+
+        <a href="#vision">
+            Vizyon
+        </a>
+
+        <a href="#projects">
+            Projeler
+        </a>
+
+        <a href="#request">
+            Talep
+        </a>
+
+        <a href="#requests">
+            Talep Edilenler
+        </a>
+
+        <a href="#contact">
+            İletişim
+        </a>
+
+        <a
+            href="/admin-login.html"
+            class="admin-link"
+        >
+            Yönetici
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     ANA SAYFA
+========================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <p class="hello">
+            PORTFOLYO & ÇALIŞMALAR
+        </p>
+
+
+        <h1>
+            Ebrar Ne<br>
+            Yapsın<span>?</span>
+        </h1>
+
+
+        <h2>
+            Bilgisayar Programcılığı Öğrencisi
+        </h2>
+
+
+        <p class="hero-description">
+            Projelerimi, haftalık raporlarımı ve
+            üzerinde çalıştığım konuları burada
+            paylaşıyorum.
+        </p>
+
+
+        <!-- YAZI YAZMA EFEKTİ -->
+
+        <p id="typing"></p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#reports"
+                class="green-btn"
+            >
+                Raporları Gör
+            </a>
+
+
+            <a
+                href="#projects"
+                class="hero-white-btn"
+            >
+                Projelerim
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HAFTALIK RAPORLAR
+========================= -->
+
+<section
+    id="reports"
+    class="section gray-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            HAFTALIK ÇALIŞMALAR
+        </span>
+
+
+        <h2>
+            Haftalık Raporlar<span>.</span>
+        </h2>
+
+
+        <p>
+            Yüklediğim haftalık çalışma
+            raporlarına buradan ulaşabilirsiniz.
+        </p>
+
+    </div>
+
+
+    <!--
+        RAPOR KARTLARI BURAYA
+        OTOMATİK GELECEK
+    -->
+
+    <div
+        id="reportGrid"
+        class="card-grid"
+    >
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VİZYON
+========================= -->
+
+<section
+    id="vision"
+    class="section white-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            SİSTEM ANALİZİ
+        </span>
+
+
+        <h2>
+            Vizyon<span>.</span>
+        </h2>
+
+
+        <p>
+            Projeye ait vizyon ve
+            Aktör-Goal çalışmaları.
+        </p>
+
+    </div>
+
+
+    <!--
+        VİZYON PDF KARTLARI
+        OTOMATİK GELECEK
+    -->
+
+    <div class="vision-grid">
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJELER
+========================= -->
+
+<section
+    id="projects"
+    class="section project-section"
+>
+
+    <div class="section-title project-title">
+
+        <span>
+            ÇALIŞMALARIM
+        </span>
+
+
+        <h2>
+            Projelerim<span>.</span>
+        </h2>
+
+
+        <p>
+            Üzerinde çalıştığım bazı projeler.
+        </p>
+
+    </div>
+
+
+
+    <div class="project-grid">
+
+
+        <!-- PROJE 1 -->
+
+        <article class="project-card">
+
+            <span class="project-no">
+                01
+            </span>
+
+
+            <h3>
+                Kimya Takip Sistemi
+            </h3>
+
+
+            <p>
+                Kimyasal stokların, son kullanma
+                tarihlerinin ve stok hareketlerinin
+                takip edildiği sistem.
+            </p>
+
+
+            <div class="tags">
+
+                <span>
+                    Node.js
+                </span>
+
+                <span>
+                    MySQL
+                </span>
+
+                <span>
+                    REST API
+                </span>
+
+            </div>
+
+
+            <a href="#">
+                Projeyi İncele →
+            </a>
+
+        </article>
+
+
+
+        <!-- PROJE 2 -->
+
+        <article class="project-card">
+
+            <span class="project-no">
+                02
+            </span>
+
+
+            <h3>
+                Veri Seti Sistemi
+            </h3>
+
+
+            <p>
+                Veri setlerinin yayınlandığı ve
+                veri erişim başvurularının
+                yönetildiği web platformu.
+            </p>
+
+
+            <div class="tags">
+
+                <span>
+                    Next.js
+                </span>
+
+                <span>
+                    PostgreSQL
+                </span>
+
+                <span>
+                    TypeScript
+                </span>
+
+            </div>
+
+
+            <a href="#">
+                Projeyi İncele →
+            </a>
+
+        </article>
+
+
+
+        <!-- PROJE 3 -->
+
+        <article class="project-card">
+
+            <span class="project-no">
+                03
+            </span>
+
+
+            <h3>
+                Makine Arıza Takip
+            </h3>
+
+
+            <p>
+                Fabrika makinelerinin arıza ve
+                bakım süreçlerinin takip edilmesi
+                için geliştirilen sistem.
+            </p>
+
+
+            <div class="tags">
+
+                <span>
+                    Web
+                </span>
+
+                <span>
+                    Database
+                </span>
+
+            </div>
+
+
+            <a href="#">
+                Projeyi İncele →
+            </a>
+
+        </article>
+
+
+
+        <!-- PROJE 4 -->
+
+        <article class="project-card">
+
+            <span class="project-no">
+                04
+            </span>
+
+
+            <h3>
+                Google Earth Engine
+            </h3>
+
+
+            <p>
+                Uydu görüntüleri kullanılarak
+                arazi sınıflandırması üzerine
+                yapılan çalışma.
+            </p>
+
+
+            <div class="tags">
+
+                <span>
+                    JavaScript
+                </span>
+
+                <span>
+                    GEE
+                </span>
+
+            </div>
+
+
+            <a href="#">
+                Projeyi İncele →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TALEP OLUŞTUR
+========================= -->
+
+<section
+    id="request"
+    class="section white-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            FİKİR & ÖNERİ
+        </span>
+
+
+        <h2>
+            Talep Oluştur<span>.</span>
+        </h2>
+
+
+        <p>
+            Yapmamı istediğiniz proje veya
+            çalışma fikrini iletebilirsiniz.
+        </p>
+
+    </div>
+
+
+
+    <div class="request-area">
+
+
+        <form
+            id="requestForm"
+            class="request-form"
+        >
+
+
+            <div class="form-row">
+
+
+                <!-- AD -->
+
+                <div class="form-group">
+
+                    <label>
+                        Adınız
+                    </label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Adınızı yazın"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        E-posta
+                    </label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="E-posta adresiniz"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- BAŞLIK -->
+
+            <div class="form-group">
+
+                <label>
+                    Talep Başlığı
+                </label>
+
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="Ne yapmamı istersiniz?"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- AÇIKLAMA -->
+
+            <div class="form-group">
+
+                <label>
+                    Açıklama
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Talebinizi kısaca açıklayın..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- GÖNDER -->
+
+            <button type="submit">
+
+                Talebi Gönder →
+
+            </button>
+
+
+            <!-- SONUÇ MESAJI -->
+
+            <p id="requestMessage"></p>
+
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TALEP EDİLENLER
+========================= -->
+
+<section
+    id="requests"
+    class="section gray-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            GELEN FİKİRLER
+        </span>
+
+
+        <h2>
+            Talep Edilenler<span>.</span>
+        </h2>
+
+
+        <p>
+            Bana gönderilen proje ve
+            çalışma fikirleri.
+        </p>
+
+    </div>
+
+
+
+    <!--
+        TALEPLER BURAYA
+        OTOMATİK GELECEK
+
+        Ad ve e-posta burada gösterilmeyecek.
+    -->
+
+    <div
+        id="publicRequestList"
+        class="request-grid"
+    >
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     İLETİŞİM
+========================= -->
+
+<section
+    id="contact"
+    class="section contact-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            İLETİŞİM
+        </span>
+
+
+        <h2>
+            Bana Ulaş<span>.</span>
+        </h2>
+
+
+        <p>
+            Sosyal medya ve geliştirme hesaplarım.
+        </p>
+
+    </div>
+
+
+
+    <div class="social-grid">
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/ebrar_krdg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card"
+        >
+
+            <span>
+                Instagram
+            </span>
+
+            <strong>
+                @ebrar_krdg
+            </strong>
+
+            <b>
+                →
+            </b>
+
+        </a>
+
+
+
+        <!-- GITHUB -->
+
+        <a
+            href="https://github.com/exebo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card"
+        >
+
+            <span>
+                GitHub
+            </span>
+
+            <strong>
+                github.com/exebo
+            </strong>
+
+            <b>
+                →
+            </b>
+
+        </a>
+
+
+
+        <!-- LINKEDIN -->
+
+        <div class="social-card disabled">
+
+            <span>
+                LinkedIn
+            </span>
+
+            <strong>
+                Yakında eklenecek
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <a
+        href="#home"
+        class="footer-logo"
+    >
+        Ebrar Ne Yapsın<span>?</span>
+    </a>
+
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="scripts.js"></script>
+
+
+</body>
+
+</html>

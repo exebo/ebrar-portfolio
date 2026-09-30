@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #00e676;
+    --green-dark: #00a854;
+    --border: #e1e6e2;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #eafff2,
+            #ffffff 45%
+        );
+
+    color: #151815;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 25px;
+}
+
+.back {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #666;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.back:hover {
+    color: var(--green-dark);
+}
+
+.login-box {
+    padding: 42px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.07);
+}
+
+.login-logo {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.login-logo span {
+    color: var(--green);
+}
+
+.small-title {
+    color: var(--green-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #dce2dd;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--green);
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: #071109;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #00cf6a;
+
+    transform: translateY(-2px);
+}
+
+#loginMessage {
+    min-height: 18px;
+
+    margin-top: 15px;
+
+    color: #d92d20;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}

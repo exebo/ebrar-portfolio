@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin | Ebrar Ne Yapsın?</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<header>
+
+    <h2>
+        Ebrar Ne Yapsın<span>?</span>
+    </h2>
+
+    <div class="header-actions">
+
+        <span id="currentAdmin"></span>
+
+        <a href="/">
+            Siteye Dön
+        </a>
+
+        <button id="logoutButton">
+            Çıkış Yap
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="page-title">
+
+        <span>YÖNETİM</span>
+
+        <h1>Admin Paneli.</h1>
+
+        <p>
+            Raporları, talepleri ve yöneticileri buradan yönetebilirsin.
+        </p>
+
+    </div>
+
+
+    <!-- RAPOR YÜKLE -->
+
+    <section class="panel">
+
+        <h2>Haftalık Rapor Yükle</h2>
+
+        <form id="reportForm">
+
+            <div class="form-group">
+
+                <label>Hafta</label>
+
+                <select name="hafta" required>
+
+                    <option value="">Hafta seç</option>
+                    <option value="1">1. Hafta</option>
+                    <option value="2">2. Hafta</option>
+                    <option value="3">3. Hafta</option>
+                    <option value="4">4. Hafta</option>
+                    <option value="5">5. Hafta</option>
+                    <option value="6">6. Hafta</option>
+                    <option value="7">7. Hafta</option>
+                    <option value="8">8. Hafta</option>
+                    <option value="9">9. Hafta</option>
+                    <option value="10">10. Hafta</option>
+                    <option value="11">11. Hafta</option>
+                    <option value="12">12. Hafta</option>
+                    <option value="13">13. Hafta</option>
+                    <option value="14">14. Hafta</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>PDF</label>
+
+                <input
+                    type="file"
+                    name="pdf"
+                    accept=".pdf,application/pdf"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+                PDF Yükle
+            </button>
+
+        </form>
+
+        <p id="reportMessage" class="message"></p>
+
+    </section>
+
+
+    <!-- RAPORLAR -->
+
+    <section class="panel">
+
+        <h2>Yüklü Raporlar</h2>
+
+        <div id="reportList"></div>
+
+    </section>
+
+
+    <!-- VİZYON -->
+
+    <section class="panel">
+
+        <h2>Vizyon Dosyası Yükle</h2>
+
+        <form id="visionForm">
+
+            <div class="form-group">
+
+                <label>Dosya Türü</label>
+
+                <select name="type" required>
+
+                    <option value="">Tür seç</option>
+
+                    <option value="vision">
+                        Vizyon Dokümanı
+                    </option>
+
+                    <option value="actor-goal">
+                        Aktör - Goal İlişkisi
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>PDF</label>
+
+                <input
+                    type="file"
+                    name="pdf"
+                    accept=".pdf,application/pdf"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+                PDF Yükle
+            </button>
+
+        </form>
+
+        <p id="visionMessage" class="message"></p>
+
+        <div id="visionList"></div>
+
+    </section>
+
+
+    <!-- TALEPLER -->
+
+    <section class="panel">
+
+        <h2>Gelen Talepler</h2>
+
+        <p class="panel-description">
+            Ana sayfadaki formdan gönderilen talepler.
+        </p>
+
+        <div id="adminRequestList"></div>
+
+    </section>
+
+
+    <!-- YÖNETİCİ EKLE -->
+
+    <section class="panel">
+
+        <h2>Kullanıcı İşlemleri</h2>
+
+        <form id="userForm">
+
+            <div class="form-group">
+
+                <label>Yeni Yönetici Kullanıcı Adı</label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Kullanıcı adı"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Şifre</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="En az 6 karakter"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+                Yönetici Ekle
+            </button>
+
+        </form>
+
+        <p id="userMessage" class="message"></p>
+
+        <div class="user-list-title">
+            Yöneticiler
+        </div>
+
+        <div id="userList"></div>
+
+    </section>
+
+</main>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

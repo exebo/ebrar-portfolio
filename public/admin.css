@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #00e676;
+    --green-dark: #00a854;
+    --light: #f5f7f5;
+    --border: #e0e6e1;
+    --gray: #737a75;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7f5;
+
+    color: #151815;
+}
+
+header {
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+header h2 {
+    font-size: 21px;
+}
+
+header h2 span {
+    color: var(--green);
+}
+
+header a {
+    color: var(--green-dark);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+main {
+    width: min(1000px, 90%);
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+.page-title {
+    margin-bottom: 40px;
+}
+
+.page-title > span {
+    color: var(--green-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.page-title h1 {
+    font-size: 42px;
+
+    margin: 8px 0;
+}
+
+.page-title p {
+    color: var(--gray);
+}
+
+.panel {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    margin-bottom: 25px;
+
+    font-size: 21px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+select,
+input[type="file"] {
+    width: 100%;
+
+    padding: 13px;
+
+    background: white;
+
+    border: 1px solid #d9dfda;
+
+    border-radius: 8px;
+}
+
+button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: #061009;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00ce6a;
+}
+
+.message {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: var(--green-dark);
+}
+
+.admin-item {
+    padding: 17px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.admin-item:last-child {
+    border-bottom: none;
+}
+
+.admin-item strong {
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+.actions a,
+.actions button {
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.actions a {
+    color: var(--green-dark);
+
+    background: #eafff3;
+}
+
+.actions .delete {
+    color: #c52b2b;
+
+    background: #fff0f0;
+}
+
+.empty {
+    color: #999;
+
+    font-size: 13px;
+
+    padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+
+    .admin-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions span {
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.header-actions button {
+    padding: 9px 13px;
+    background: #151815;
+    color: white;
+}
+
+.panel-description {
+    color: #777;
+    font-size: 13px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.admin-request {
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.admin-request:last-child {
+    border-bottom: none;
+}
+
+.request-info {
+    flex: 1;
+}
+
+.request-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.request-info > p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.request-status {
+    color: #00a854;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.request-person {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 11px;
+}
+
+.request-person span {
+    color: #777;
+}
+
+.request-admin-actions {
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.request-admin-actions select {
+    width: 100%;
+}
+
+.request-admin-actions .delete {
+    background: #fff0f0;
+    color: #c52b2b;
+}
+
+.user-list-title {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+@media (max-width: 700px) {
+
+    .admin-request {
+        flex-direction: column;
+    }
+
+    .request-admin-actions {
+        min-width: 100%;
+    }
+
+    .header-actions span {
+        display: none;
+    }
+}

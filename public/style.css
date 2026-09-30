@@ -1,0 +1,1152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #00e676;
+    --green-dark: #00a854;
+    --black: #090b0a;
+    --dark: #111411;
+    --white: #ffffff;
+    --light: #f5f7f5;
+    --gray: #747b76;
+    --border: #e1e6e2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #151815;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+header {
+    width: 100%;
+    height: 76px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    color: #111411;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a {
+    color: #565b57;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--green-dark);
+}
+
+
+/* ========================================
+   HERO / ANA SAYFA
+======================================== */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 120px 8% 70px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background-image: url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Görselin üstündeki karartma */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.82) 30%,
+            rgba(0, 0, 0, 0.55) 55%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0.08) 100%
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+
+    max-width: 760px;
+}
+
+
+.hello {
+    color: var(--green);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    color: #ffffff;
+
+    font-size: clamp(65px, 7vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 28px;
+}
+
+
+.hero h1 span {
+    color: var(--green);
+}
+
+
+.hero h2 {
+    color: #ffffff;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-description {
+    color: #d5d8d6;
+
+    max-width: 600px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.green-btn,
+.hero-white-btn {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+
+.green-btn {
+    background: var(--green);
+
+    color: #061009;
+}
+
+
+.green-btn:hover {
+    background: #00cf6a;
+
+    transform: translateY(-2px);
+}
+
+
+.hero-white-btn {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(6px);
+}
+
+
+.hero-white-btn:hover {
+    background: #ffffff;
+
+    color: #111111;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   GENEL BÖLÜMLER
+======================================== */
+
+.section {
+    padding: 110px 8%;
+}
+
+
+.white-section {
+    background: #ffffff;
+}
+
+
+.gray-section {
+    background: var(--light);
+}
+
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+
+.section-title > span {
+    color: var(--green-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.section-title h2 {
+    color: #151815;
+
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+
+.section-title h2 span {
+    color: var(--green);
+}
+
+
+.section-title p {
+    color: var(--gray);
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   HAFTALIK RAPORLAR
+======================================== */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.file-card {
+    aspect-ratio: 1 / 1;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.25s;
+}
+
+
+.file-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+.number {
+    color: var(--green);
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    opacity: 0.28;
+}
+
+
+.file-card small {
+    color: var(--green-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.file-card h3 {
+    color: #161916;
+
+    font-size: 25px;
+
+    margin-top: 7px;
+}
+
+
+.file-card > p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.file-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.file-buttons a {
+    color: var(--green-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.file-buttons a:hover {
+    color: #006d37;
+}
+
+
+/* ========================================
+   VİZYON
+======================================== */
+
+.vision-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.vision-card {
+    min-height: 330px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.25s;
+}
+
+
+.vision-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+
+.pdf-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e9fff3;
+
+    color: var(--green-dark);
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.vision-card small {
+    color: var(--green-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.vision-card h3 {
+    color: #151815;
+
+    font-size: 24px;
+
+    margin: 8px 0 12px;
+}
+
+
+.vision-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.vision-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.vision-buttons a {
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    background: #f1f4f2;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.vision-buttons a:first-child {
+    background: var(--green);
+
+    color: #061009;
+}
+
+
+/* ========================================
+   PROJELER
+======================================== */
+
+.project-section {
+    background: var(--black);
+}
+
+
+.project-title h2 {
+    color: #ffffff;
+}
+
+
+.project-title p {
+    color: #8d938f;
+}
+
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.project-card {
+    min-height: 310px;
+
+    padding: 32px;
+
+    background: var(--dark);
+
+    border: 1px solid #292e2a;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.25s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--green);
+}
+
+
+.project-no {
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.project-card h3 {
+    color: #ffffff;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-card > p {
+    color: #929993;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    flex: 1;
+}
+
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin: 20px 0;
+}
+
+
+.tags span {
+    padding: 6px 10px;
+
+    background: #082619;
+
+    color: var(--green);
+
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+
+.project-card > a {
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   TALEP FORMU
+======================================== */
+
+.request-area {
+    max-width: 850px;
+}
+
+
+.request-form {
+    padding: 35px;
+
+    background: var(--light);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    color: #333333;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce2dd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #222222;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+}
+
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+.request-form button {
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: #071109;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.request-form button:hover {
+    background: #00cf6a;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   TALEP EDİLENLER
+======================================== */
+
+.request-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.request-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    transition: 0.25s;
+}
+
+
+.request-card:hover {
+    border-color: var(--green);
+
+    transform: translateY(-4px);
+}
+
+
+.request-card > span {
+    color: var(--green-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.request-card h3 {
+    color: #151815;
+
+    margin: 14px 0;
+
+    font-size: 20px;
+}
+
+
+.request-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.status {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 7px 12px;
+
+    background: #fff4d7;
+
+    color: #8b6300;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.status.completed {
+    background: #e5fff0;
+
+    color: #008d46;
+}
+
+
+/* ========================================
+   İLETİŞİM
+======================================== */
+
+.contact-section {
+    background: #ffffff;
+}
+
+
+.social-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.social-card {
+    min-height: 160px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: #151815;
+
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+
+.social-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+
+.social-card span {
+    color: var(--green-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.social-card strong {
+    font-size: 17px;
+}
+
+
+.social-card b {
+    color: var(--green);
+
+    margin-top: auto;
+
+    font-size: 20px;
+}
+
+
+.social-card.disabled {
+    color: #999999;
+
+    cursor: default;
+}
+
+
+.social-card.disabled:hover {
+    transform: none;
+
+    border-color: var(--border);
+
+    box-shadow: none;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 30px 8%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #999999;
+}
+
+
+.footer-logo {
+    color: #111411;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.footer-logo span {
+    color: var(--green);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero-content {
+        width: 70%;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   TELEFON
+======================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100vh;
+
+        padding: 120px 7% 70px;
+
+        background-position: 65% center;
+    }
+
+    .hero-overlay {
+        background:
+            rgba(0, 0, 0, 0.72);
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    /* BÖLÜMLER */
+
+    .section {
+        padding: 85px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+
+    /* GRID */
+
+    .card-grid,
+    .vision-grid,
+    .project-grid,
+    .request-grid,
+    .social-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* RAPOR KART */
+
+    .file-card {
+        aspect-ratio: auto;
+
+        min-height: 300px;
+    }
+
+
+    /* FORM */
+
+    .request-form {
+        padding: 25px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 7%;
+    }
+}
+
+
+/* ========================================
+   ÇOK KÜÇÜK EKRAN
+======================================== */
+
+@media (max-width: 480px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
